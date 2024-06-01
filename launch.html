@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+body {
+background-color: #D9D9D9; --C0C0C0
+}
+
+</style>
+</head>
+
+<div id="DataType">Тип:</div> 
+<input type="text" id="inputTxt" oninput="inRequest()" value="" size=100>
+
+
+<script>
+function inRequest() {
+    inRequestTxt = document.getElementById("inputTxt").value;
+    if (inRequestTxt.indexOf("inf")>=0) {
+        txtT = inRequestTxt.indexOf("inf");
+        document.querySelector('#DataType').textContent = txtT;
+       // document.getElementById("DataType").textContent = "Тип: " + "Перс !" + txtT + "!" inRequestTxt;
+        }
+    else {
+//        document.getElementById("analysis").contentWindow.document.getElementById("testData").textContent = "Тип: " + "Перс ";
+        //document.getElementById("DataType").textContent = "0";
+        document.querySelector("#DataType").textContent=parent.document.getElementsByTagName ('div'); //document.querySelector("#DataType").id;
+ //       parent.frames.getElementById("analysis").querySelector("#testData").textContent=document.location.href;
+        parent.frames.getElementById("analysis").analysis.window.location.href = "index.php";
+        
+    }
+
+//      alert(theText);
+      
+    }
+</script>
+</html>
